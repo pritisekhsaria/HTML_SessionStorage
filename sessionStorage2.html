@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+body{color:#0770b8;}
+a{
+color:#0770b8;
+text-decoration:none;
+font-size:2em;
+}
+</style>
+<script>
+function session1()
+{
+	if (sessionStorage.cartCount) //will be true if it has data
+	{
+		sessionStorage.cartCount = Number(sessionStorage.cartCount)+1;
+	} else {
+		sessionStorage.cartCount = 1;
+	}
+	document.getElementById("cart").innerHTML = sessionStorage.cartCount;
+
+}
+</script>
+</head>
+<body align="center">
+<h1 align="center">Welcome To Online Shopping</h1>
+<br/>
+<div align="center"><img src="products1.jpg" /></div>
+<div style="padding-left:175px;font-weight:bold" id="cart"></div>
+<a href="#"><img src="add-to-cart-button.png" onclick="session1()"></a>
+
+<img src="cartSmall.jpg" style="padding-left:40px;"/>
+<p>
+<a href="sessionStorage1.html">Home</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="sessionStorage3.html">Next</a>
+</p>
+
+<script>
+if (sessionStorage.cartCount) {
+	document.getElementById("cart").innerHTML = sessionStorage.cartCount;
+}
+else
+{
+	document.getElementById("cart").innerHTML = "";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+
+
+
+<style>
+h1{color:#0770b8;}
+a{
+color:#0770b8;
+text-decoration:none;
+font-size:2em;
+}
+</style>
+</head>
+<body align="center">
+<h1>Welcome To Online Shopping</h1>
+
+<p><img src="cartBig.jpg"/></p>
+<h3>Enjoy your shopping experience</h3>
+<a href="sessionStorage2.html">Enter</a>
+<div id="result"></div>
+
+<script>
+//given in body as we can display output in result div only after making it.
+if(typeof(Storage) == "undefined") {
+	document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+}
+</script>
+</body>
+</html>
